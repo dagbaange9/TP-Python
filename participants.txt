@@ -1,0 +1,6 @@
+Aminata Diallo;debutant;aminata@gi2.bj 
+Kofi Agossou;intermediaire;kofi@gi2.bj 
+Grace Hounsou;debutant;grace@gi2.bj 
+Rodrigue Kpinou;avance;rodrigue@gi2.bj 
+Fatou Zannou;intermediaire;fatou@gi2.bj 
+Serge Loko;debutant;serge@gi2.bj
