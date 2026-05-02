@@ -11,44 +11,65 @@ print()
 
 
 try:
-    liste = []
-
-    f = open ("participants.txt", "r")
-     #contenu = f.read()
-    print(f"Participants = ")
-    for ligne in f:
-      infos = ligne.strip().split(";")
-
+       liste = []
     
-
-    if len(infos) == 3:
-           dico = {
-                "nom": infos[0],
-                "niveau": infos[1],
-                "email": infos[2]
+       f = open("participants.txt", "r")
+       print("Participants =")
+        
+       for ligne in f:
+            infos = ligne.strip().split(";")
+            
+            
+            if len(infos) == 3:
+                dico = {
+                    "nom": infos[0],
+                    "niveau": infos[1],
+                    "email": infos[2]
                 }
-           liste.append(dico)
-
-           for perso in liste:
-             print(perso)
-except FileNotFoundError:
-    print("Erreur : le fichier participants.txt est introuvable.") 
+                liste.append(dico)
+       for perso in liste:
+        print(perso)
 
 
 
-
-
-    
-           
-           
-    
    
+      
+
+except FileNotFoundError:
+    print("Erreur : le fichier participants.txt est introuvable.")
 
 
 
-           
-           
-    
-    
 
-    
+debutant = 0
+intermediaire = 0
+avance = 0
+for i , perso in  enumerate(liste,1):
+         
+         
+        
+
+        if perso['niveau'] == "debutant":
+         
+          print( {i}, f"| {perso['nom']}" ,f"| {perso['niveau']}" , f"| {perso['email']}")
+          print()
+
+          debutant += 1
+        elif perso['niveau'] == "intermediaire":
+          
+          print( {i}, f"| {perso['nom']}" ,f"| {perso['niveau']}" , f"| {perso['email']}")
+          print()
+
+          intermediaire += 1
+
+        else:
+          
+
+          print( {i}, f"| {perso['nom']}" ,f"| {perso['niveau']}" , f"| {perso['email']}")
+          print()
+
+          avance += 1
+print("debutant : ", debutant )
+print("intermediaire : ", intermediaire)
+print("avance : ", avance)
+  
